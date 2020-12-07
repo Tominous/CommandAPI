@@ -4,8 +4,6 @@ read oldVer
 echo "New version: "
 read newVer
 
-sed -i "s/<commandapi\.version>$oldVer<\/commandapi\.version>/<commandapi\.version>$newVer<\/commandapi\.version>/" CommandAPI/pom.xml
-
 sed -i "s/<version>$oldVer<\/version>/<version>$newVer<\/version>/" docssrc/src/shading.md
 sed -i "s/<version>$oldVer<\/version>/<version>$newVer<\/version>/" docssrc/src/quickstart.md
 sed -i "s/<version>$oldVer<\/version>/<version>$newVer<\/version>/" docssrc/src/annotationsetup.md
@@ -17,3 +15,7 @@ sed -i "s/version: $oldVer/version: $newVer/" CommandAPI/commandapi-plugin/src/m
 
 sed -i "s/PROJECT_NUMBER         = $oldVer/PROJECT_NUMBER         = $newVer/" Doxyfile
 sed -i "s/$oldVer/$newVer/" docssrc/book.toml
+
+cd CommandAPI
+mvn versions:set -DnewVersion=$newVer
+mvn versions:commit
