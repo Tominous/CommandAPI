@@ -34,8 +34,8 @@
 						// Return boolean with a first/second chance
 						return Math.ceil(Math.random() * (double) second) <= (double) first;
 					}, arguments));
-			// .executes(Brigadier.fromCommand(new CommandAPICommand("") /* And so on...
-			// */));
+			 .executes(Brigadier.fromCommand(new CommandAPICommand("") /* And so on...
+			 */));
 			
 			//Optionally, you can include another 'execute' here, so you could do '/execute if <firstVal> <secondVal>' and that returns a value
 			
@@ -70,7 +70,7 @@
 			}
 			{
 				LinkedHashMap<String, Argument> arguments = new LinkedHashMap<>();
-//		        arguments.put("text", new TextArgument().safeOverrideSuggestions("hello", "world!"));
+		        arguments.put("text", new TextArgument().safeOverrideSuggestions("hello", "world!"));
 				arguments.put("fr", new FloatRangeArgument()
 						.safeOverrideSuggestions(FloatRange.floatRangeGreaterThanOrEq(2), new FloatRange(20, 40)));
 
@@ -193,17 +193,17 @@
 			}
 			{
 				Argument[] arguments = new Argument[] { new AdvancementArgument(),
-//	        		new AxisArgument(),
+	        		new AxisArgument(),
 						new BiomeArgument(), new BlockStateArgument(), new BooleanArgument(), new ChatArgument(),
 						new ChatColorArgument(), new ChatComponentArgument(),
-//	        		new CustomArgument(),
+	        		new CustomArgument(),
 						new DoubleArgument(), new EnchantmentArgument(),
-//	        		new EntitySelectorArgument(),
+	        		new EntitySelectorArgument(),
 						new EnchantmentArgument(), new EntitySelectorArgument(EntitySelector.MANY_ENTITIES),
 						new EntityTypeArgument(), new EnvironmentArgument(), new FloatArgument(),
 						new FloatRangeArgument(), new FunctionArgument(), new GreedyStringArgument(),
 						new IntegerArgument(), new IntegerRangeArgument(), new ItemStackArgument(),
-//	        		new LiteralArgument(""),
+	        		new LiteralArgument(""),
 						new Location2DArgument(), new LocationArgument(), new LongArgument(), new LootTableArgument(),
 						new MathOperationArgument(), new NBTCompoundArgument(), new ObjectiveArgument(),
 						new ObjectiveCriteriaArgument(), new ParticleArgument(), new PlayerArgument(),
